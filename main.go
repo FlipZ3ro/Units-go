@@ -148,6 +148,9 @@ func main() {
 			}
 
 			fmt.Printf("Transaction %d sent to %s , tx link : https://explorer-testnet.unit0.dev/tx/%s\n", i+1, newAddress.Hex(), signedTx.Hash().Hex())
+			
+			// Add a delay between transactions
+			time.Sleep(200 * time.Millisecond) // 0.2 seconds delay
 		}
 		fmt.Println("========================================")
 	}
